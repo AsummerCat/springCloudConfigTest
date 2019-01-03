@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+    # 配置你需要链接的config-server地址
+      uri: http://user:password@localhost:8081
+      ## 配置文件名称
+      profile: dev

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+          git:
+            uri: https://github.com/AsummerCat/SpringCloudConfigFileTest
+          # 这里是配置git下面的具体目录 会    -> uri地址下的config-server目录中
+            search-paths: config-server
+          #  password: 如果需要权限访问
+          #  username: 如果需要权限访问
+server:
+  port: 8081
+
+#配置security的账号密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password
