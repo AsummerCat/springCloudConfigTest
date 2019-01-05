@@ -11,7 +11,7 @@ spring:
           #  password: 如果需要权限访问
           #  username: 如果需要权限访问
 server:
-  port: 8081
+  port: 9092
 
 #配置security的账号密码
 security:
@@ -20,3 +20,9 @@ security:
   user:
     name: user
     password: password
+
+# 注册到eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/

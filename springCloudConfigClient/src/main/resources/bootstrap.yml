@@ -4,6 +4,21 @@ spring:
   cloud:
     config:
     # 配置你需要链接的config-server地址
-      uri: http://user:password@localhost:8081
+      #uri: http://user:password@localhost:8081
       ## 配置文件名称
       profile: dev
+
+      discovery:
+      # 表示使用服务发现组件中的Config Server，而不自己指定Config Server的uri，默认false
+        enabled: true
+        # 指定Config Server在服务发现中的serviceId，默认是configserver
+        service-id: config-server
+      #如果有configServer 有权限的话
+      username: user
+      password: password
+
+# 注册到eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/

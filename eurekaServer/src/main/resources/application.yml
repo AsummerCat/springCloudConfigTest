@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-Server
+server:
+  port: 8100
+
+eureka:
+  instance:
+  #设置当前实例的主机名称
+    hostname: localhost
+  client:
+  #关闭本身的服务注册
+    register-with-eureka: false
+    #检索服务
+    fetch-registry: false
+    ##关闭保护模式
+ # server:
+  #  enableSelfPreservation: false
